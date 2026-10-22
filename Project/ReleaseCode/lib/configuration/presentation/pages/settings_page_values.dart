@@ -1,0 +1,42 @@
+/// Inputs used only by the settings page.
+abstract final class SettingsPageValues {
+  static const double outerPadding = 24;
+  static const double headingToAccessibilityGap = 24;
+  static const double languageToColorModeGap = 12;
+  static const double colorModeToPresetGap = 12;
+  static const double presetToHighContrastGap = 12;
+  static const double presetToTextSizeGap = 12;
+  static const double textSizeToShortcutGap = 12;
+  static const double accessibilityToRuntimeGap = 20;
+  static const double runtimeStatusPadding = 14;
+  static const double runtimeStatusRadius = 10;
+  static const double runtimeStatusIconGap = 10;
+  static const double runtimeStatusIconSize = 24;
+  static const int runtimeStatusFontWeightIndex = 5;
+  static const double runtimeStatusToDatabaseGap = 18;
+  static const double databaseToApplicationGap = 14;
+  static const double applicationToPythonGap = 14;
+  static const double dependencyHeadingGap = 22;
+  static const double dependencyItemGap = 14;
+  static const double dependencyCardPadding = 16;
+  static const double dependencyCardRadius = 10;
+  static const double dependencyCardBorderWidth = 1;
+  static const double dependencyPathToButtonGap = 12;
+  static const double dependencyListBottomGap = 22;
+  static const double dependencyCheckBottomGap = 22;
+  static const double dependencyChildrenPadding = 0;
+  static const double pythonToActionsGap = 18;
+  static const double runtimeActionGap = 12;
+  static const double runtimeActionRunGap = 12;
+  static const double runtimeToMigrationGap = 20;
+  static const double runtimeToLogGap = 20;
+  static const double logPathToActionGap = 12;
+  static const double migrationFieldToActionGap = 14;
+  static const double fieldCompactBreakpoint = 760;
+  static const double compactFieldButtonGap = 10;
+  static const double wideFieldButtonGap = 12;
+  static const double pathButtonWidth = 340;
+  static const double resetSectionGap = 20;
+  static const double resetActionGap = 12;
+  static const double resetOperationGap = 24;
+}

@@ -1,0 +1,1 @@
+"""Information-type embedding services."""

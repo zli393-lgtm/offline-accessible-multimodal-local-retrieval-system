@@ -1,0 +1,12 @@
+Offline Accessible Multimodal Local Content Retrieval System
+Copyright 2026 project contributors
+
+This product includes third-party software, model weights, fonts, and runtime
+components. Their licenses remain independent from the Apache License 2.0 used
+for the original project source. See THIRD_PARTY_NOTICES.md and the license
+files retained inside each bundled dependency directory.
+
+Apple MobileCLIP attribution:
+"Apple Machine Learning Research Model is licensed under the Apple Machine
+Learning Research Model License Agreement."
+

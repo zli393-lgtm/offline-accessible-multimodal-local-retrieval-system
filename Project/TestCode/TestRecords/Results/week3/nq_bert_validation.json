@@ -1,0 +1,820 @@
+{
+  "metrics": {
+    "protocol": "NQ consensus long-answer embedding retrieval",
+    "model": "google-bert/bert-base-uncased",
+    "tflite_model": "bert_base_uncased_dynamic.tflite",
+    "max_sequence_length": 512,
+    "chunk_overlap_tokens": 32,
+    "batch_size": 8,
+    "queries": 100,
+    "documents": 100,
+    "document_chunks": 190,
+    "recall_at_1": 0.58,
+    "recall_at_5": 0.82,
+    "recall_at_10": 0.88,
+    "mrr": 0.6822405580068522,
+    "elapsed_seconds": 358.7231765000033
+  },
+  "queries": [
+    {
+      "query_id": 0,
+      "nq_id": "8594030243394572667",
+      "best_positive_rank": 1,
+      "positive_document_ids": [
+        0
+      ]
+    },
+    {
+      "query_id": 1,
+      "nq_id": "-716176363900512091",
+      "best_positive_rank": 1,
+      "positive_document_ids": [
+        1
+      ]
+    },
+    {
+      "query_id": 2,
+      "nq_id": "-5593761806871287545",
+      "best_positive_rank": 3,
+      "positive_document_ids": [
+        2
+      ]
+    },
+    {
+      "query_id": 3,
+      "nq_id": "4245798066923223457",
+      "best_positive_rank": 2,
+      "positive_document_ids": [
+        3
+      ]
+    },
+    {
+      "query_id": 4,
+      "nq_id": "2074579308847994444",
+      "best_positive_rank": 1,
+      "positive_document_ids": [
+        4
+      ]
+    },
+    {
+      "query_id": 5,
+      "nq_id": "-774521643378360615",
+      "best_positive_rank": 1,
+      "positive_document_ids": [
+        5
+      ]
+    },
+    {
+      "query_id": 6,
+      "nq_id": "-4418682909598136345",
+      "best_positive_rank": 1,
+      "positive_document_ids": [
+        6
+      ]
+    },
+    {
+      "query_id": 7,
+      "nq_id": "-331751834641431619",
+      "best_positive_rank": 85,
+      "positive_document_ids": [
+        7
+      ]
+    },
+    {
+      "query_id": 8,
+      "nq_id": "-9176609205043531937",
+      "best_positive_rank": 24,
+      "positive_document_ids": [
+        8
+      ]
+    },
+    {
+      "query_id": 9,
+      "nq_id": "1318031841813121387",
+      "best_positive_rank": 1,
+      "positive_document_ids": [
+        9
+      ]
+    },
+    {
+      "query_id": 10,
+      "nq_id": "-9162050415301085820",
+      "best_positive_rank": 15,
+      "positive_document_ids": [
+        10
+      ]
+    },
+    {
+      "query_id": 11,
+      "nq_id": "5668950355459073907",
+      "best_positive_rank": 2,
+      "positive_document_ids": [
+        11
+      ]
+    },
+    {
+      "query_id": 12,
+      "nq_id": "-873107511766305306",
+      "best_positive_rank": 1,
+      "positive_document_ids": [
+        12
+      ]
+    },
+    {
+      "query_id": 13,
+      "nq_id": "-58163792752112756",
+      "best_positive_rank": 1,
+      "positive_document_ids": [
+        13
+      ]
+    },
+    {
+      "query_id": 14,
+      "nq_id": "-2812597164906272385",
+      "best_positive_rank": 1,
+      "positive_document_ids": [
+        14
+      ]
+    },
+    {
+      "query_id": 15,
+      "nq_id": "-366699919824131906",
+      "best_positive_rank": 5,
+      "positive_document_ids": [
+        15
+      ]
+    },
+    {
+      "query_id": 16,
+      "nq_id": "-6639724600997668931",
+      "best_positive_rank": 1,
+      "positive_document_ids": [
+        16
+      ]
+    },
+    {
+      "query_id": 17,
+      "nq_id": "5537254681877187953",
+      "best_positive_rank": 1,
+      "positive_document_ids": [
+        17
+      ]
+    },
+    {
+      "query_id": 18,
+      "nq_id": "6309445075358131629",
+      "best_positive_rank": 7,
+      "positive_document_ids": [
+        18
+      ]
+    },
+    {
+      "query_id": 19,
+      "nq_id": "-4135209844918483842",
+      "best_positive_rank": 82,
+      "positive_document_ids": [
+        19
+      ]
+    },
+    {
+      "query_id": 20,
+      "nq_id": "-2735096849453555611",
+      "best_positive_rank": 6,
+      "positive_document_ids": [
+        20
+      ]
+    },
+    {
+      "query_id": 21,
+      "nq_id": "5487540490957673313",
+      "best_positive_rank": 1,
+      "positive_document_ids": [
+        21
+      ]
+    },
+    {
+      "query_id": 22,
+      "nq_id": "7747650527256300808",
+      "best_positive_rank": 1,
+      "positive_document_ids": [
+        22
+      ]
+    },
+    {
+      "query_id": 23,
+      "nq_id": "8654444840445750317",
+      "best_positive_rank": 3,
+      "positive_document_ids": [
+        23
+      ]
+    },
+    {
+      "query_id": 24,
+      "nq_id": "5543510584551366341",
+      "best_positive_rank": 1,
+      "positive_document_ids": [
+        24
+      ]
+    },
+    {
+      "query_id": 25,
+      "nq_id": "-2919421084803245578",
+      "best_positive_rank": 9,
+      "positive_document_ids": [
+        25
+      ]
+    },
+    {
+      "query_id": 26,
+      "nq_id": "6872093854408039409",
+      "best_positive_rank": 2,
+      "positive_document_ids": [
+        26
+      ]
+    },
+    {
+      "query_id": 27,
+      "nq_id": "-8022345911863395279",
+      "best_positive_rank": 1,
+      "positive_document_ids": [
+        27
+      ]
+    },
+    {
+      "query_id": 28,
+      "nq_id": "1065612251914840415",
+      "best_positive_rank": 3,
+      "positive_document_ids": [
+        28
+      ]
+    },
+    {
+      "query_id": 29,
+      "nq_id": "8445480979399089918",
+      "best_positive_rank": 1,
+      "positive_document_ids": [
+        29
+      ]
+    },
+    {
+      "query_id": 30,
+      "nq_id": "4258647591080003263",
+      "best_positive_rank": 1,
+      "positive_document_ids": [
+        30
+      ]
+    },
+    {
+      "query_id": 31,
+      "nq_id": "6009212502620981150",
+      "best_positive_rank": 64,
+      "positive_document_ids": [
+        31
+      ]
+    },
+    {
+      "query_id": 32,
+      "nq_id": "-1626541047372980132",
+      "best_positive_rank": 64,
+      "positive_document_ids": [
+        32
+      ]
+    },
+    {
+      "query_id": 33,
+      "nq_id": "-2526808060075032872",
+      "best_positive_rank": 1,
+      "positive_document_ids": [
+        33
+      ]
+    },
+    {
+      "query_id": 34,
+      "nq_id": "-693847391395525804",
+      "best_positive_rank": 1,
+      "positive_document_ids": [
+        34
+      ]
+    },
+    {
+      "query_id": 35,
+      "nq_id": "4019335299699332844",
+      "best_positive_rank": 2,
+      "positive_document_ids": [
+        35
+      ]
+    },
+    {
+      "query_id": 36,
+      "nq_id": "6603817788688282552",
+      "best_positive_rank": 2,
+      "positive_document_ids": [
+        36
+      ]
+    },
+    {
+      "query_id": 37,
+      "nq_id": "8095779539186493860",
+      "best_positive_rank": 1,
+      "positive_document_ids": [
+        37
+      ]
+    },
+    {
+      "query_id": 38,
+      "nq_id": "-1003552412210538439",
+      "best_positive_rank": 1,
+      "positive_document_ids": [
+        38
+      ]
+    },
+    {
+      "query_id": 39,
+      "nq_id": "4989141810567668595",
+      "best_positive_rank": 3,
+      "positive_document_ids": [
+        39
+      ]
+    },
+    {
+      "query_id": 40,
+      "nq_id": "-2685189347357661450",
+      "best_positive_rank": 1,
+      "positive_document_ids": [
+        40
+      ]
+    },
+    {
+      "query_id": 41,
+      "nq_id": "-507393196484821237",
+      "best_positive_rank": 1,
+      "positive_document_ids": [
+        41
+      ]
+    },
+    {
+      "query_id": 42,
+      "nq_id": "-6244540977142172176",
+      "best_positive_rank": 1,
+      "positive_document_ids": [
+        42
+      ]
+    },
+    {
+      "query_id": 43,
+      "nq_id": "-435045979542112632",
+      "best_positive_rank": 1,
+      "positive_document_ids": [
+        43
+      ]
+    },
+    {
+      "query_id": 44,
+      "nq_id": "-1580637763990313083",
+      "best_positive_rank": 3,
+      "positive_document_ids": [
+        44
+      ]
+    },
+    {
+      "query_id": 45,
+      "nq_id": "-8153368396899020971",
+      "best_positive_rank": 2,
+      "positive_document_ids": [
+        45
+      ]
+    },
+    {
+      "query_id": 46,
+      "nq_id": "-2976262139241480610",
+      "best_positive_rank": 1,
+      "positive_document_ids": [
+        46
+      ]
+    },
+    {
+      "query_id": 47,
+      "nq_id": "-1043054449143427368",
+      "best_positive_rank": 1,
+      "positive_document_ids": [
+        47
+      ]
+    },
+    {
+      "query_id": 48,
+      "nq_id": "-7518405190999038417",
+      "best_positive_rank": 1,
+      "positive_document_ids": [
+        48
+      ]
+    },
+    {
+      "query_id": 49,
+      "nq_id": "-6324374377150128718",
+      "best_positive_rank": 2,
+      "positive_document_ids": [
+        49
+      ]
+    },
+    {
+      "query_id": 50,
+      "nq_id": "-510907719981675661",
+      "best_positive_rank": 1,
+      "positive_document_ids": [
+        50
+      ]
+    },
+    {
+      "query_id": 51,
+      "nq_id": "-7198839892825072919",
+      "best_positive_rank": 12,
+      "positive_document_ids": [
+        51
+      ]
+    },
+    {
+      "query_id": 52,
+      "nq_id": "-4042391161693864280",
+      "best_positive_rank": 1,
+      "positive_document_ids": [
+        52
+      ]
+    },
+    {
+      "query_id": 53,
+      "nq_id": "7598777188623034272",
+      "best_positive_rank": 1,
+      "positive_document_ids": [
+        53
+      ]
+    },
+    {
+      "query_id": 54,
+      "nq_id": "-1368201692760033173",
+      "best_positive_rank": 1,
+      "positive_document_ids": [
+        54
+      ]
+    },
+    {
+      "query_id": 55,
+      "nq_id": "3196153695189700947",
+      "best_positive_rank": 1,
+      "positive_document_ids": [
+        55
+      ]
+    },
+    {
+      "query_id": 56,
+      "nq_id": "-5599477228666844910",
+      "best_positive_rank": 1,
+      "positive_document_ids": [
+        56
+      ]
+    },
+    {
+      "query_id": 57,
+      "nq_id": "-1493479660388418305",
+      "best_positive_rank": 16,
+      "positive_document_ids": [
+        57
+      ]
+    },
+    {
+      "query_id": 58,
+      "nq_id": "-4366283268910846199",
+      "best_positive_rank": 1,
+      "positive_document_ids": [
+        58
+      ]
+    },
+    {
+      "query_id": 59,
+      "nq_id": "-1317942101497986450",
+      "best_positive_rank": 5,
+      "positive_document_ids": [
+        59
+      ]
+    },
+    {
+      "query_id": 60,
+      "nq_id": "-2751908283042856030",
+      "best_positive_rank": 1,
+      "positive_document_ids": [
+        60
+      ]
+    },
+    {
+      "query_id": 61,
+      "nq_id": "-4094761539773366482",
+      "best_positive_rank": 1,
+      "positive_document_ids": [
+        61
+      ]
+    },
+    {
+      "query_id": 62,
+      "nq_id": "5639549384591145661",
+      "best_positive_rank": 1,
+      "positive_document_ids": [
+        62
+      ]
+    },
+    {
+      "query_id": 63,
+      "nq_id": "5478391725045473537",
+      "best_positive_rank": 1,
+      "positive_document_ids": [
+        63
+      ]
+    },
+    {
+      "query_id": 64,
+      "nq_id": "-7155063525359960751",
+      "best_positive_rank": 79,
+      "positive_document_ids": [
+        64
+      ]
+    },
+    {
+      "query_id": 65,
+      "nq_id": "-7438513259629345624",
+      "best_positive_rank": 1,
+      "positive_document_ids": [
+        65
+      ]
+    },
+    {
+      "query_id": 66,
+      "nq_id": "2129315990503064870",
+      "best_positive_rank": 1,
+      "positive_document_ids": [
+        66
+      ]
+    },
+    {
+      "query_id": 67,
+      "nq_id": "-1425049791898563664",
+      "best_positive_rank": 2,
+      "positive_document_ids": [
+        67
+      ]
+    },
+    {
+      "query_id": 68,
+      "nq_id": "-6638858301927955236",
+      "best_positive_rank": 1,
+      "positive_document_ids": [
+        68
+      ]
+    },
+    {
+      "query_id": 69,
+      "nq_id": "353421942758169811",
+      "best_positive_rank": 7,
+      "positive_document_ids": [
+        69
+      ]
+    },
+    {
+      "query_id": 70,
+      "nq_id": "8761534532663338953",
+      "best_positive_rank": 1,
+      "positive_document_ids": [
+        70
+      ]
+    },
+    {
+      "query_id": 71,
+      "nq_id": "-1464218253776053027",
+      "best_positive_rank": 1,
+      "positive_document_ids": [
+        71
+      ]
+    },
+    {
+      "query_id": 72,
+      "nq_id": "5783164682986114581",
+      "best_positive_rank": 52,
+      "positive_document_ids": [
+        72
+      ]
+    },
+    {
+      "query_id": 73,
+      "nq_id": "2444026240819891708",
+      "best_positive_rank": 1,
+      "positive_document_ids": [
+        73
+      ]
+    },
+    {
+      "query_id": 74,
+      "nq_id": "-2905696611778901658",
+      "best_positive_rank": 5,
+      "positive_document_ids": [
+        74
+      ]
+    },
+    {
+      "query_id": 75,
+      "nq_id": "-8762144002773697012",
+      "best_positive_rank": 3,
+      "positive_document_ids": [
+        75
+      ]
+    },
+    {
+      "query_id": 76,
+      "nq_id": "3583774855116605581",
+      "best_positive_rank": 1,
+      "positive_document_ids": [
+        76
+      ]
+    },
+    {
+      "query_id": 77,
+      "nq_id": "4145408349385326530",
+      "best_positive_rank": 1,
+      "positive_document_ids": [
+        77
+      ]
+    },
+    {
+      "query_id": 78,
+      "nq_id": "3394342679382237403",
+      "best_positive_rank": 2,
+      "positive_document_ids": [
+        78
+      ]
+    },
+    {
+      "query_id": 79,
+      "nq_id": "5328438809332726480",
+      "best_positive_rank": 10,
+      "positive_document_ids": [
+        79
+      ]
+    },
+    {
+      "query_id": 80,
+      "nq_id": "-8206924862280693153",
+      "best_positive_rank": 3,
+      "positive_document_ids": [
+        80
+      ]
+    },
+    {
+      "query_id": 81,
+      "nq_id": "7206245989456268244",
+      "best_positive_rank": 1,
+      "positive_document_ids": [
+        81
+      ]
+    },
+    {
+      "query_id": 82,
+      "nq_id": "-7581059872074630037",
+      "best_positive_rank": 1,
+      "positive_document_ids": [
+        82
+      ]
+    },
+    {
+      "query_id": 83,
+      "nq_id": "2186635546724071017",
+      "best_positive_rank": 10,
+      "positive_document_ids": [
+        83
+      ]
+    },
+    {
+      "query_id": 84,
+      "nq_id": "2727227527741721150",
+      "best_positive_rank": 20,
+      "positive_document_ids": [
+        84
+      ]
+    },
+    {
+      "query_id": 85,
+      "nq_id": "8251044183838767734",
+      "best_positive_rank": 2,
+      "positive_document_ids": [
+        85
+      ]
+    },
+    {
+      "query_id": 86,
+      "nq_id": "-4028450490988007336",
+      "best_positive_rank": 1,
+      "positive_document_ids": [
+        86
+      ]
+    },
+    {
+      "query_id": 87,
+      "nq_id": "-7491187190913609813",
+      "best_positive_rank": 1,
+      "positive_document_ids": [
+        87
+      ]
+    },
+    {
+      "query_id": 88,
+      "nq_id": "7882691903232616365",
+      "best_positive_rank": 1,
+      "positive_document_ids": [
+        88
+      ]
+    },
+    {
+      "query_id": 89,
+      "nq_id": "-2768248554730702231",
+      "best_positive_rank": 3,
+      "positive_document_ids": [
+        89
+      ]
+    },
+    {
+      "query_id": 90,
+      "nq_id": "8100720230590583039",
+      "best_positive_rank": 4,
+      "positive_document_ids": [
+        90
+      ]
+    },
+    {
+      "query_id": 91,
+      "nq_id": "191024324280973989",
+      "best_positive_rank": 4,
+      "positive_document_ids": [
+        91
+      ]
+    },
+    {
+      "query_id": 92,
+      "nq_id": "-3956329482216467389",
+      "best_positive_rank": 19,
+      "positive_document_ids": [
+        92
+      ]
+    },
+    {
+      "query_id": 93,
+      "nq_id": "-4846330438469216667",
+      "best_positive_rank": 1,
+      "positive_document_ids": [
+        93
+      ]
+    },
+    {
+      "query_id": 94,
+      "nq_id": "3319628900030289527",
+      "best_positive_rank": 4,
+      "positive_document_ids": [
+        94
+      ]
+    },
+    {
+      "query_id": 95,
+      "nq_id": "5695822721888688847",
+      "best_positive_rank": 1,
+      "positive_document_ids": [
+        95
+      ]
+    },
+    {
+      "query_id": 96,
+      "nq_id": "2670565187885347608",
+      "best_positive_rank": 1,
+      "positive_document_ids": [
+        96
+      ]
+    },
+    {
+      "query_id": 97,
+      "nq_id": "-252884797611335797",
+      "best_positive_rank": 1,
+      "positive_document_ids": [
+        97
+      ]
+    },
+    {
+      "query_id": 98,
+      "nq_id": "618673237462258667",
+      "best_positive_rank": 1,
+      "positive_document_ids": [
+        98
+      ]
+    },
+    {
+      "query_id": 99,
+      "nq_id": "-654813784263793476",
+      "best_positive_rank": 1,
+      "positive_document_ids": [
+        99
+      ]
+    }
+  ]
+}

@@ -1,0 +1,724 @@
+{
+  "metrics": {
+    "protocol": "COCO first-caption retrieval within deterministic subset",
+    "model": "MobileCLIP-S0",
+    "samples": 100,
+    "batch_size": 16,
+    "dimensions": 512,
+    "elapsed_seconds": 15.177410300006159,
+    "text_to_image": {
+      "recall_at_1": 0.86,
+      "recall_at_5": 1.0,
+      "recall_at_10": 1.0,
+      "mrr": 0.9208333333333332
+    },
+    "image_to_text": {
+      "recall_at_1": 0.9,
+      "recall_at_5": 0.99,
+      "recall_at_10": 1.0,
+      "mrr": 0.9367619047619047
+    }
+  },
+  "samples": [
+    {
+      "image_id": 397133,
+      "image_path": "raw/val2017/000000397133.jpg",
+      "caption": "A man is in a kitchen making pizzas.",
+      "text_to_image_rank": 1,
+      "image_to_text_rank": 1
+    },
+    {
+      "image_id": 37777,
+      "image_path": "raw/val2017/000000037777.jpg",
+      "caption": "The dining table near the kitchen has a bowl of fruit on it.",
+      "text_to_image_rank": 1,
+      "image_to_text_rank": 1
+    },
+    {
+      "image_id": 252219,
+      "image_path": "raw/val2017/000000252219.jpg",
+      "caption": "a person with a shopping cart on a city street",
+      "text_to_image_rank": 1,
+      "image_to_text_rank": 1
+    },
+    {
+      "image_id": 87038,
+      "image_path": "raw/val2017/000000087038.jpg",
+      "caption": "A person on a skateboard and bike at a skate park.",
+      "text_to_image_rank": 2,
+      "image_to_text_rank": 1
+    },
+    {
+      "image_id": 174482,
+      "image_path": "raw/val2017/000000174482.jpg",
+      "caption": "a blue bike parked on a side walk",
+      "text_to_image_rank": 1,
+      "image_to_text_rank": 1
+    },
+    {
+      "image_id": 403385,
+      "image_path": "raw/val2017/000000403385.jpg",
+      "caption": "A bathroom that has a broken wall in the shower.",
+      "text_to_image_rank": 1,
+      "image_to_text_rank": 2
+    },
+    {
+      "image_id": 6818,
+      "image_path": "raw/val2017/000000006818.jpg",
+      "caption": "a couple of buckets in a white room",
+      "text_to_image_rank": 1,
+      "image_to_text_rank": 4
+    },
+    {
+      "image_id": 480985,
+      "image_path": "raw/val2017/000000480985.jpg",
+      "caption": "The shiny motorcycle has been put on display.",
+      "text_to_image_rank": 1,
+      "image_to_text_rank": 1
+    },
+    {
+      "image_id": 458054,
+      "image_path": "raw/val2017/000000458054.jpg",
+      "caption": "A row of white toilets sitting on top of a dirt ground.",
+      "text_to_image_rank": 1,
+      "image_to_text_rank": 1
+    },
+    {
+      "image_id": 331352,
+      "image_path": "raw/val2017/000000331352.jpg",
+      "caption": "A small closed toilet in a cramped space.",
+      "text_to_image_rank": 1,
+      "image_to_text_rank": 1
+    },
+    {
+      "image_id": 296649,
+      "image_path": "raw/val2017/000000296649.jpg",
+      "caption": "People are walking and riding motorcycles on the street",
+      "text_to_image_rank": 1,
+      "image_to_text_rank": 1
+    },
+    {
+      "image_id": 386912,
+      "image_path": "raw/val2017/000000386912.jpg",
+      "caption": "a person sitting at a desk with a keyboard and monitor",
+      "text_to_image_rank": 1,
+      "image_to_text_rank": 1
+    },
+    {
+      "image_id": 502136,
+      "image_path": "raw/val2017/000000502136.jpg",
+      "caption": "A building wall and pair of doors that are open, along with vases of flowers on the outside of the building.",
+      "text_to_image_rank": 1,
+      "image_to_text_rank": 1
+    },
+    {
+      "image_id": 491497,
+      "image_path": "raw/val2017/000000491497.jpg",
+      "caption": "A fluffy white chair that faces away fro a television.",
+      "text_to_image_rank": 1,
+      "image_to_text_rank": 1
+    },
+    {
+      "image_id": 184791,
+      "image_path": "raw/val2017/000000184791.jpg",
+      "caption": "A painting of a table with fruit on top of it.",
+      "text_to_image_rank": 1,
+      "image_to_text_rank": 1
+    },
+    {
+      "image_id": 348881,
+      "image_path": "raw/val2017/000000348881.jpg",
+      "caption": "A large jetliner sitting on top of an airport runway.",
+      "text_to_image_rank": 1,
+      "image_to_text_rank": 1
+    },
+    {
+      "image_id": 289393,
+      "image_path": "raw/val2017/000000289393.jpg",
+      "caption": "Set of toy animals sitting in front of a red wooden wagon.",
+      "text_to_image_rank": 1,
+      "image_to_text_rank": 1
+    },
+    {
+      "image_id": 522713,
+      "image_path": "raw/val2017/000000522713.jpg",
+      "caption": "a bench sitting in the grass facing the water and boats",
+      "text_to_image_rank": 1,
+      "image_to_text_rank": 1
+    },
+    {
+      "image_id": 181666,
+      "image_path": "raw/val2017/000000181666.jpg",
+      "caption": "a flock of goats and some men watching them",
+      "text_to_image_rank": 1,
+      "image_to_text_rank": 1
+    },
+    {
+      "image_id": 17627,
+      "image_path": "raw/val2017/000000017627.jpg",
+      "caption": "Several cars are parked in front of a building.",
+      "text_to_image_rank": 1,
+      "image_to_text_rank": 1
+    },
+    {
+      "image_id": 143931,
+      "image_path": "raw/val2017/000000143931.jpg",
+      "caption": "A political candidate advertisement on the side of a coach bus.",
+      "text_to_image_rank": 1,
+      "image_to_text_rank": 1
+    },
+    {
+      "image_id": 303818,
+      "image_path": "raw/val2017/000000303818.jpg",
+      "caption": "A bus traveling down a curvy road behind a black car.",
+      "text_to_image_rank": 2,
+      "image_to_text_rank": 1
+    },
+    {
+      "image_id": 463730,
+      "image_path": "raw/val2017/000000463730.jpg",
+      "caption": "Two buses parked in a parking lot next to cars.",
+      "text_to_image_rank": 3,
+      "image_to_text_rank": 2
+    },
+    {
+      "image_id": 460347,
+      "image_path": "raw/val2017/000000460347.jpg",
+      "caption": "A bus traveling on a freeway next to other traffic.",
+      "text_to_image_rank": 1,
+      "image_to_text_rank": 1
+    },
+    {
+      "image_id": 322864,
+      "image_path": "raw/val2017/000000322864.jpg",
+      "caption": "A yellow taxi cab sitting below tall buildings.",
+      "text_to_image_rank": 1,
+      "image_to_text_rank": 1
+    },
+    {
+      "image_id": 226111,
+      "image_path": "raw/val2017/000000226111.jpg",
+      "caption": "A No bicycles, skates or skateboards sign on a pole.",
+      "text_to_image_rank": 1,
+      "image_to_text_rank": 1
+    },
+    {
+      "image_id": 153299,
+      "image_path": "raw/val2017/000000153299.jpg",
+      "caption": "two giraffes are standing together outside a barn",
+      "text_to_image_rank": 1,
+      "image_to_text_rank": 1
+    },
+    {
+      "image_id": 308394,
+      "image_path": "raw/val2017/000000308394.jpg",
+      "caption": "An older woman riding a train while sitting under it's window.",
+      "text_to_image_rank": 1,
+      "image_to_text_rank": 1
+    },
+    {
+      "image_id": 456496,
+      "image_path": "raw/val2017/000000456496.jpg",
+      "caption": "A woman sitting in front of the Eiffel tower near pigeons.",
+      "text_to_image_rank": 1,
+      "image_to_text_rank": 1
+    },
+    {
+      "image_id": 58636,
+      "image_path": "raw/val2017/000000058636.jpg",
+      "caption": "A large wooden pole with a green street sign hanging from it.",
+      "text_to_image_rank": 2,
+      "image_to_text_rank": 1
+    },
+    {
+      "image_id": 41888,
+      "image_path": "raw/val2017/000000041888.jpg",
+      "caption": "Three birds walking around a dry grass field.",
+      "text_to_image_rank": 1,
+      "image_to_text_rank": 1
+    },
+    {
+      "image_id": 184321,
+      "image_path": "raw/val2017/000000184321.jpg",
+      "caption": "A train traveling down tracks next to lights.",
+      "text_to_image_rank": 1,
+      "image_to_text_rank": 1
+    },
+    {
+      "image_id": 565778,
+      "image_path": "raw/val2017/000000565778.jpg",
+      "caption": "A train going back to its coarse filled with people.",
+      "text_to_image_rank": 1,
+      "image_to_text_rank": 1
+    },
+    {
+      "image_id": 297343,
+      "image_path": "raw/val2017/000000297343.jpg",
+      "caption": "A stop sign has been placed upside-down in the grass beside a building.",
+      "text_to_image_rank": 2,
+      "image_to_text_rank": 1
+    },
+    {
+      "image_id": 336587,
+      "image_path": "raw/val2017/000000336587.jpg",
+      "caption": "a stop sign sittin on a pole that is somewhat broken",
+      "text_to_image_rank": 1,
+      "image_to_text_rank": 1
+    },
+    {
+      "image_id": 122745,
+      "image_path": "raw/val2017/000000122745.jpg",
+      "caption": "A stop sign is lit up in the dark of night.",
+      "text_to_image_rank": 1,
+      "image_to_text_rank": 1
+    },
+    {
+      "image_id": 219578,
+      "image_path": "raw/val2017/000000219578.jpg",
+      "caption": "A dog and cat lying  together on an orange couch.",
+      "text_to_image_rank": 1,
+      "image_to_text_rank": 1
+    },
+    {
+      "image_id": 555705,
+      "image_path": "raw/val2017/000000555705.jpg",
+      "caption": "Two cats sitting on top of a pair of shoes.",
+      "text_to_image_rank": 1,
+      "image_to_text_rank": 1
+    },
+    {
+      "image_id": 443303,
+      "image_path": "raw/val2017/000000443303.jpg",
+      "caption": "A cat laying on clothes that are in a suitcase.",
+      "text_to_image_rank": 1,
+      "image_to_text_rank": 1
+    },
+    {
+      "image_id": 500663,
+      "image_path": "raw/val2017/000000500663.jpg",
+      "caption": "A herd of cattle grazing on a lush green field.",
+      "text_to_image_rank": 1,
+      "image_to_text_rank": 1
+    },
+    {
+      "image_id": 418281,
+      "image_path": "raw/val2017/000000418281.jpg",
+      "caption": "two cows outside one laying down and the other standing near a building",
+      "text_to_image_rank": 1,
+      "image_to_text_rank": 1
+    },
+    {
+      "image_id": 25560,
+      "image_path": "raw/val2017/000000025560.jpg",
+      "caption": "An orange and white cat standing in front of a flat screen TV",
+      "text_to_image_rank": 1,
+      "image_to_text_rank": 1
+    },
+    {
+      "image_id": 403817,
+      "image_path": "raw/val2017/000000403817.jpg",
+      "caption": "A cat sitting beside a laptop on a desk.",
+      "text_to_image_rank": 1,
+      "image_to_text_rank": 1
+    },
+    {
+      "image_id": 85329,
+      "image_path": "raw/val2017/000000085329.jpg",
+      "caption": "An image of a very cute girl with face piercings.",
+      "text_to_image_rank": 1,
+      "image_to_text_rank": 1
+    },
+    {
+      "image_id": 329323,
+      "image_path": "raw/val2017/000000329323.jpg",
+      "caption": "A group of people who are standing together.",
+      "text_to_image_rank": 4,
+      "image_to_text_rank": 5
+    },
+    {
+      "image_id": 239274,
+      "image_path": "raw/val2017/000000239274.jpg",
+      "caption": "A yacht with people is near a pier on clear water.",
+      "text_to_image_rank": 1,
+      "image_to_text_rank": 1
+    },
+    {
+      "image_id": 286994,
+      "image_path": "raw/val2017/000000286994.jpg",
+      "caption": "some elephants and one is by some water",
+      "text_to_image_rank": 1,
+      "image_to_text_rank": 1
+    },
+    {
+      "image_id": 511321,
+      "image_path": "raw/val2017/000000511321.jpg",
+      "caption": "there are two large boats that are in the water",
+      "text_to_image_rank": 1,
+      "image_to_text_rank": 1
+    },
+    {
+      "image_id": 314294,
+      "image_path": "raw/val2017/000000314294.jpg",
+      "caption": "An elephant standing under the shade of a tree.",
+      "text_to_image_rank": 1,
+      "image_to_text_rank": 1
+    },
+    {
+      "image_id": 233771,
+      "image_path": "raw/val2017/000000233771.jpg",
+      "caption": "A black and white image with a colored british flag umbrella",
+      "text_to_image_rank": 1,
+      "image_to_text_rank": 1
+    },
+    {
+      "image_id": 475779,
+      "image_path": "raw/val2017/000000475779.jpg",
+      "caption": "There is an elephant standing near a tree.",
+      "text_to_image_rank": 2,
+      "image_to_text_rank": 2
+    },
+    {
+      "image_id": 301867,
+      "image_path": "raw/val2017/000000301867.jpg",
+      "caption": "THERE ARE WOMEN THAT ARE LAUGHING UNDER THE UMBRELLA",
+      "text_to_image_rank": 1,
+      "image_to_text_rank": 1
+    },
+    {
+      "image_id": 312421,
+      "image_path": "raw/val2017/000000312421.jpg",
+      "caption": "Several middle eastern looking stickers decorate a black briefcase.",
+      "text_to_image_rank": 1,
+      "image_to_text_rank": 1
+    },
+    {
+      "image_id": 185250,
+      "image_path": "raw/val2017/000000185250.jpg",
+      "caption": "A woman standing next to a  brown and white dog.",
+      "text_to_image_rank": 1,
+      "image_to_text_rank": 1
+    },
+    {
+      "image_id": 356427,
+      "image_path": "raw/val2017/000000356427.jpg",
+      "caption": "A man standing next to train tracks with bags of luggage.",
+      "text_to_image_rank": 1,
+      "image_to_text_rank": 1
+    },
+    {
+      "image_id": 572517,
+      "image_path": "raw/val2017/000000572517.jpg",
+      "caption": "a polar bear following a big winged bird",
+      "text_to_image_rank": 1,
+      "image_to_text_rank": 1
+    },
+    {
+      "image_id": 270244,
+      "image_path": "raw/val2017/000000270244.jpg",
+      "caption": "A zebra all by itself in the green forest.",
+      "text_to_image_rank": 1,
+      "image_to_text_rank": 1
+    },
+    {
+      "image_id": 516316,
+      "image_path": "raw/val2017/000000516316.jpg",
+      "caption": "An antilope is eating grass in between two zebra.",
+      "text_to_image_rank": 1,
+      "image_to_text_rank": 1
+    },
+    {
+      "image_id": 125211,
+      "image_path": "raw/val2017/000000125211.jpg",
+      "caption": "A zebra standing on top of a grass covered field.",
+      "text_to_image_rank": 2,
+      "image_to_text_rank": 1
+    },
+    {
+      "image_id": 562121,
+      "image_path": "raw/val2017/000000562121.jpg",
+      "caption": "Two zebras fighting in a cloud of dust",
+      "text_to_image_rank": 1,
+      "image_to_text_rank": 1
+    },
+    {
+      "image_id": 360661,
+      "image_path": "raw/val2017/000000360661.jpg",
+      "caption": "A couple of jockey's riding the horses through the beach.",
+      "text_to_image_rank": 1,
+      "image_to_text_rank": 1
+    },
+    {
+      "image_id": 16228,
+      "image_path": "raw/val2017/000000016228.jpg",
+      "caption": "There is a white horse pulling a trolley behind it.",
+      "text_to_image_rank": 1,
+      "image_to_text_rank": 1
+    },
+    {
+      "image_id": 382088,
+      "image_path": "raw/val2017/000000382088.jpg",
+      "caption": "A big and white horse in a dirt cage.",
+      "text_to_image_rank": 1,
+      "image_to_text_rank": 1
+    },
+    {
+      "image_id": 266409,
+      "image_path": "raw/val2017/000000266409.jpg",
+      "caption": "A man in a blue coat skiing through a snowy field.",
+      "text_to_image_rank": 1,
+      "image_to_text_rank": 1
+    },
+    {
+      "image_id": 430961,
+      "image_path": "raw/val2017/000000430961.jpg",
+      "caption": "A baseball player preparing to throw a pitch during a game.",
+      "text_to_image_rank": 1,
+      "image_to_text_rank": 1
+    },
+    {
+      "image_id": 80671,
+      "image_path": "raw/val2017/000000080671.jpg",
+      "caption": "A person is trying to ski down a snowy slope.",
+      "text_to_image_rank": 1,
+      "image_to_text_rank": 1
+    },
+    {
+      "image_id": 577539,
+      "image_path": "raw/val2017/000000577539.jpg",
+      "caption": "A bowl of banana's, sprinkels, chocolate chips, and marshmellows.",
+      "text_to_image_rank": 1,
+      "image_to_text_rank": 1
+    },
+    {
+      "image_id": 104612,
+      "image_path": "raw/val2017/000000104612.jpg",
+      "caption": "A plate is filled with broccoli and noodles.",
+      "text_to_image_rank": 1,
+      "image_to_text_rank": 1
+    },
+    {
+      "image_id": 476258,
+      "image_path": "raw/val2017/000000476258.jpg",
+      "caption": "A person in a helmet is riding a skateboard.",
+      "text_to_image_rank": 1,
+      "image_to_text_rank": 1
+    },
+    {
+      "image_id": 448365,
+      "image_path": "raw/val2017/000000448365.jpg",
+      "caption": "Youngster on a skateboard, trying simple tip up stunt.",
+      "text_to_image_rank": 1,
+      "image_to_text_rank": 1
+    },
+    {
+      "image_id": 35197,
+      "image_path": "raw/val2017/000000035197.jpg",
+      "caption": "A person on a skateboard rides down a ramp.",
+      "text_to_image_rank": 1,
+      "image_to_text_rank": 1
+    },
+    {
+      "image_id": 349860,
+      "image_path": "raw/val2017/000000349860.jpg",
+      "caption": "A BOY WITH A BLUE SHIRT AND JEAN PANTS DOING A TRICK WITH HIS SKATEBOARD",
+      "text_to_image_rank": 3,
+      "image_to_text_rank": 4
+    },
+    {
+      "image_id": 180135,
+      "image_path": "raw/val2017/000000180135.jpg",
+      "caption": "A man holding a microphone in one hand while he holds a skateboard in the other.",
+      "text_to_image_rank": 2,
+      "image_to_text_rank": 1
+    },
+    {
+      "image_id": 486438,
+      "image_path": "raw/val2017/000000486438.jpg",
+      "caption": "A plate of donuts with a person in the background.",
+      "text_to_image_rank": 1,
+      "image_to_text_rank": 1
+    },
+    {
+      "image_id": 400573,
+      "image_path": "raw/val2017/000000400573.jpg",
+      "caption": "A man biting into a doughnut with a sly look.",
+      "text_to_image_rank": 1,
+      "image_to_text_rank": 1
+    },
+    {
+      "image_id": 109798,
+      "image_path": "raw/val2017/000000109798.jpg",
+      "caption": "three different donuts one is pink one is brown and one has white sprinkles",
+      "text_to_image_rank": 1,
+      "image_to_text_rank": 2
+    },
+    {
+      "image_id": 370677,
+      "image_path": "raw/val2017/000000370677.jpg",
+      "caption": "Three workers stand next to each other with their baked goods behind them.",
+      "text_to_image_rank": 1,
+      "image_to_text_rank": 1
+    },
+    {
+      "image_id": 238866,
+      "image_path": "raw/val2017/000000238866.jpg",
+      "caption": "tHERE ARE MANY DONUTS LAYED TO DRY ON A GRILL",
+      "text_to_image_rank": 1,
+      "image_to_text_rank": 1
+    },
+    {
+      "image_id": 369370,
+      "image_path": "raw/val2017/000000369370.jpg",
+      "caption": "A sandwich on a plate served with garnish.",
+      "text_to_image_rank": 1,
+      "image_to_text_rank": 1
+    },
+    {
+      "image_id": 502737,
+      "image_path": "raw/val2017/000000502737.jpg",
+      "caption": "A person holding up a chocolate doughnut with a face drawn on it.",
+      "text_to_image_rank": 2,
+      "image_to_text_rank": 1
+    },
+    {
+      "image_id": 515579,
+      "image_path": "raw/val2017/000000515579.jpg",
+      "caption": "A man holding a ball while standing next to a gate.",
+      "text_to_image_rank": 1,
+      "image_to_text_rank": 7
+    },
+    {
+      "image_id": 515445,
+      "image_path": "raw/val2017/000000515445.jpg",
+      "caption": "A group of people walking on top of a beach.",
+      "text_to_image_rank": 1,
+      "image_to_text_rank": 1
+    },
+    {
+      "image_id": 173383,
+      "image_path": "raw/val2017/000000173383.jpg",
+      "caption": "A two layer cake sitting on top of a table.",
+      "text_to_image_rank": 1,
+      "image_to_text_rank": 1
+    },
+    {
+      "image_id": 438862,
+      "image_path": "raw/val2017/000000438862.jpg",
+      "caption": "a group of adults playing soccer on a field",
+      "text_to_image_rank": 2,
+      "image_to_text_rank": 1
+    },
+    {
+      "image_id": 180560,
+      "image_path": "raw/val2017/000000180560.jpg",
+      "caption": "Two women in a room with one of them holding a cake.",
+      "text_to_image_rank": 1,
+      "image_to_text_rank": 1
+    },
+    {
+      "image_id": 347693,
+      "image_path": "raw/val2017/000000347693.jpg",
+      "caption": "A couple of windows sitting inside of a room.",
+      "text_to_image_rank": 3,
+      "image_to_text_rank": 3
+    },
+    {
+      "image_id": 39956,
+      "image_path": "raw/val2017/000000039956.jpg",
+      "caption": "A messy room with door and bed and chair.",
+      "text_to_image_rank": 1,
+      "image_to_text_rank": 1
+    },
+    {
+      "image_id": 321214,
+      "image_path": "raw/val2017/000000321214.jpg",
+      "caption": "A baby in plaid shirt eating a frosted cake.",
+      "text_to_image_rank": 1,
+      "image_to_text_rank": 1
+    },
+    {
+      "image_id": 474028,
+      "image_path": "raw/val2017/000000474028.jpg",
+      "caption": "a group of kids playing soccer in a field",
+      "text_to_image_rank": 1,
+      "image_to_text_rank": 1
+    },
+    {
+      "image_id": 66523,
+      "image_path": "raw/val2017/000000066523.jpg",
+      "caption": "A bed topped with three white pillows covered in a canopy.",
+      "text_to_image_rank": 1,
+      "image_to_text_rank": 1
+    },
+    {
+      "image_id": 355257,
+      "image_path": "raw/val2017/000000355257.jpg",
+      "caption": "A woman laying in a hospital bed hooded up to machines.",
+      "text_to_image_rank": 1,
+      "image_to_text_rank": 1
+    },
+    {
+      "image_id": 142092,
+      "image_path": "raw/val2017/000000142092.jpg",
+      "caption": "A pizza with vegetables and cheese resting on a board.",
+      "text_to_image_rank": 1,
+      "image_to_text_rank": 1
+    },
+    {
+      "image_id": 63154,
+      "image_path": "raw/val2017/000000063154.jpg",
+      "caption": "A surfer is riding a wave in light blue water.",
+      "text_to_image_rank": 1,
+      "image_to_text_rank": 1
+    },
+    {
+      "image_id": 199551,
+      "image_path": "raw/val2017/000000199551.jpg",
+      "caption": "A picture of a young boy laying on top of a bed.",
+      "text_to_image_rank": 1,
+      "image_to_text_rank": 1
+    },
+    {
+      "image_id": 239347,
+      "image_path": "raw/val2017/000000239347.jpg",
+      "caption": "A picture of a recently married couple displayed behind glass.",
+      "text_to_image_rank": 1,
+      "image_to_text_rank": 1
+    },
+    {
+      "image_id": 514508,
+      "image_path": "raw/val2017/000000514508.jpg",
+      "caption": "A man in bowler hat and lab coat by people in a tv frame.",
+      "text_to_image_rank": 3,
+      "image_to_text_rank": 2
+    },
+    {
+      "image_id": 473237,
+      "image_path": "raw/val2017/000000473237.jpg",
+      "caption": "A young girl eating a slice of pizza.",
+      "text_to_image_rank": 1,
+      "image_to_text_rank": 1
+    },
+    {
+      "image_id": 228144,
+      "image_path": "raw/val2017/000000228144.jpg",
+      "caption": "A chair sitting in the middle of the room, in a black and white photo.",
+      "text_to_image_rank": 1,
+      "image_to_text_rank": 1
+    },
+    {
+      "image_id": 206027,
+      "image_path": "raw/val2017/000000206027.jpg",
+      "caption": "A slice of pizza that is on top of a napkin.",
+      "text_to_image_rank": 1,
+      "image_to_text_rank": 1
+    },
+    {
+      "image_id": 78915,
+      "image_path": "raw/val2017/000000078915.jpg",
+      "caption": "A tennis player hits a high ball in front of an audience.",
+      "text_to_image_rank": 1,
+      "image_to_text_rank": 1
+    }
+  ]
+}

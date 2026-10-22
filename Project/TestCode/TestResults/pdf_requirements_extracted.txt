@@ -1,0 +1,280 @@
+=== PAGE 1 ===
+Software Engineering Project: Offline 
+Accessible Multimodal Local Content 
+Retrieval System
+ 
+Duration: 8 Weeks (2 Months) 
+ 
+Project Background
+ 
+This project aligns with our founding mission: to organize the world's information and make it universally 
+accessible and useful. It replicates the end-to-end software engineering workflow of core product teams, 
+focusing on solving a real user pain point: billions of users including people with visual impairments are 
+struggling to efficiently search and retrieve unstructured local content across personal devices, such as 
+PDFs, documents, images, screenshots. Existing solutions are often cloud-dependent, paid, lack robust 
+accessibility features, or fail to support semantic multimodal search.
+Core Project Goals
+ 
+1. Build a fully open-source, offline-first, cross-platform multimodal local content retrieval tool
+2. Meet WCAG 2.1 AA accessibility standards, aligned with global accessibility commitments
+3. Deliver production-grade code, full documentation, and a deployable end product following software 
+engineering best practices
+Core Tech Stack
+ 
+Cross-platform UI: Flutter
+ML Inference: TensorFlow Lite (end-side inference framework)
+Multimodal Models: BERT (text embedding) + MobileCLIP (image embedding)
+Document Parsing: PDFium (Chromium PDF engine) + Apache Tika
+Vector Storage: Chroma DB (local vector database)
+Testing: Google Test + Flutter Test
+Version Control: Git + GitHub
+Accessibility Validation: Google Accessibility Scanner + WAVE
+ 
+ 
+Weekly Project Plan
+ 
+
+
+=== PAGE 2 ===
+Key Tasks
+Weekly Deliverables
+1. Review software engineering best practices, accessibility guidelines, and
+open-source compliance rules2. Finalize functional/non-functional
+requirements (offline-first, cross-platform support, WCAG 2.1 AA
+compliance)3. Set up full development environment: Flutter SDK,
+TensorFlow Lite, Git, Chroma DB, and all open-source dependencies4.
+Download and curate validation splits of required datasets5. Complete
+project risk assessment and mitigation plan
+1. Signed-off Project
+Requirements
+Document (PRD)2.
+Environment setup
+validation report3.
+Curated local dataset
+repository4. Project
+risk management plan
+Key Tasks
+Weekly Deliverables
+1. Design full modular system architecture: File I/O Layer, Parsing Layer,
+Embedding Engine Layer, Vector Storage Layer, Retrieval Logic Layer, UI &
+Accessibility Layer2. Develop and unit-test the file parsing module
+(support for TXT, PDF, DOCX, JPG, PNG formats)3. Implement batch file
+ingestion and metadata extraction logic4. Draft full technical design
+document (TDD) with architecture diagrams
+1. Finalized System
+Architecture Design
+Document2. Functional
+file parsing module with
+≥80% unit test
+coverage3. Module API
+documentation
+Week 1: Project Onboarding, Requirement Definition & 
+Environment Setup
+ 
+Core Focus: Align with engineering standards, finalize scope, and build a fully functional development 
+environment
+Week 2: System Architecture Design & Core File Parsing Module 
+Development
+ 
+Core Focus: Design a modular, maintainable architecture aligned with Google’s clean code principles, build 
+the foundation of the data ingestion pipeline
+Week 3: Multimodal Embedding Engine Development
+ 
+Core Focus: Integrate models to build a local, offline embedding engine for text and image content
+
+
+=== PAGE 3 ===
+Key Tasks
+Weekly Deliverables
+1. Optimize and integrate BERT-base model for text embedding, converted
+for TensorFlow Lite offline CPU inference2. Integrate MobileCLIP model for
+lightweight image embedding, optimized for end-side execution3. Build a
+unified embedding interface for standardized text/image input processing4.
+Validate embedding accuracy using the NQ and COCO validation datasets5.
+Implement batch embedding processing for large local file libraries
+1. Functional
+multimodal
+embedding engine2.
+Model accuracy
+validation report3.
+Unit test suite for the
+embedding module
+(≥85% test coverage)
+Key Tasks
+Weekly Deliverables
+1. Integrate Chroma DB for local vector storage, indexing, and similarity
+search2. Develop hybrid semantic retrieval logic: keyword + embedding-
+based similarity scoring, result ranking, and filter functionality3. Build
+the end-to-end retrieval pipeline: file ingestion → parsing → embedding
+→ storage → search → result return4. Conduct end-to-end functional
+testing of the core pipeline5. Benchmark retrieval accuracy using curated
+test datasets
+1. Integrated vector
+storage and retrieval
+module2. Working MVP of
+the full core retrieval
+pipeline3. End-to-end
+functional test report4.
+Retrieval accuracy
+benchmark report
+Key Tasks
+Weekly Deliverables
+1. Develop cross-platform UI with Flutter, including core screens: file
+library management, search interface, result display, and settings2.
+Implement mandatory accessibility features: screen reader support
+(NVDA/VoiceOver), keyboard-only navigation, high-contrast mode,
+dynamic font scaling3. Validate accessibility compliance with Google’s
+Accessibility Scanner and WAVE tool4. Conduct usability testing for core UI
+and accessibility workflows
+1. Functional cross-
+platform Flutter UI2.
+Accessibility compliance
+validation report (WCAG
+2.1 AA aligned)3. UI
+usability test report4.
+Draft accessibility user
+guide
+Week 4: Vector Database Integration & Core Retrieval Logic 
+Implementation
+ 
+Core Focus: Build the end-to-end semantic search pipeline, deliver a working minimum viable product 
+(MVP)
+Week 5: Cross-Platform UI Development & Accessibility Feature 
+Implementation
+ 
+Core Focus: Build a user-facing interface, implement industry-leading accessibility features
+
+
+=== PAGE 4 ===
+Key Tasks
+Weekly Deliverables
+1. Full end-to-end integration of all modules (parsing, embedding,
+retrieval, UI)2. Execute comprehensive test plan: unit tests, integration
+tests, end-to-end tests, and stress tests for large file libraries3.
+Optimize performance: reduce embedding inference latency, speed up
+vector search, and minimize memory footprint4. Fix all critical and
+high-priority bugs identified during testing5. Conduct a local data
+security review to ensure offline-only, no data leakage
+1. Fully integrated stable
+application build2. Full test
+coverage report (≥90% unit
+test coverage for core
+modules)3. Performance
+optimization benchmark
+report4. Bug fix and
+security review report
+Key Tasks
+Weekly Deliverables
+1. Write full technical documentation: architecture deep dive, API
+references, and maintenance guide 2. Create a comprehensive end-user
+manual, including installation guide, feature walkthrough, and dedicated
+accessibility operation guide3. Complete open-source compliance
+review: verify all dependency licenses, prepare Apache 2.0 license for the
+project4. Implement final UI/UX polish and minor bug fixes5. Prepare
+project demo materials
+1. Complete technical
+documentation suite2.
+End-user installation and
+operation manual3. Open
+source compliance report
+(aligned with OSS
+policies)4. Project demo
+script
+Key Tasks
+Weekly Deliverables
+1. Build production release executables for Windows, macOS, and
+Linux2. Host the full open-source project on GitHub, with complete
+README, license, and contribution guidelines 3. Record a 5-minute
+project demo video showcasing core features, accessibility functions,
+and technical implementation4. Package all internship deliverables
+into a professional portfolio
+1. Final cross-platform
+production release build2.
+Public GitHub repository
+with full production
+codebase3. Project demo
+video4. Full internship
+deliverable portfolio
+Week 6: System Integration, Full Testing & Performance 
+Optimization
+ 
+Core Focus: Stabilize the full application, ensure production-grade reliability, and optimize performance for 
+consumer hardware
+Week 7: Documentation, Open Source Compliance & Final Polish 
+Core Focus: Complete production-grade documentation and finalize user experience
+Week 8: Final Delivery, Demo & Portfolio Packaging
+ 
+Core Focus: Deliver the final production-grade product
+ 
+
+
+=== PAGE 5 ===
+Dataset Name
+Primary Use Case
+Official Download Link
+Natural Questions
+(NQ)
+Text embedding accuracy validation, long-
+document retrieval benchmarking
+https://ai.google.com/rese
+arch/NaturalQuestions
+COCO (Common
+Objects in Context)
+Image embedding accuracy validation,
+multimodal retrieval testing
+https://cocodataset.org/#d
+ownload
+RVL-CDIP
+Scanned document/image retrieval testing,
+OCR + embedding validation
+https://www.cs.cmu.edu/~
+aharley/rvl-cdip/
+Wikipedia Text
+Corpus
+Long-form document retrieval benchmarking,
+batch processing performance testing
+https://dumps.wikimedia.o
+rg/
+ 
+Full Deliverables List
+ 
+1. Production-ready, cross-platform, offline multimodal local content retrieval application
+2. Full production-grade codebase hosted on GitHub, following Google’s clean code and engineering best 
+practices
+3. Complete technical documentation suite: system architecture, API references, and maintenance guide
+4. End-user manual with dedicated accessibility usage guide
+5. Comprehensive test suite with ≥90% core module unit test coverage, plus full integration and E2E test 
+reports
+6. Open source compliance report aligned with open-source policies
+7. 5-minute project demo video
+ 
+Datasets
+ 
+ 
+Reference Materials & Learning Resources
+ 
+Engineering & Compliance Guidelines
+ 
+Software Engineering Best Practices: https://google.github.io/eng-practices/
+Material Design 3 Guidelines: https://m3.material.io/
+
+
+=== PAGE 6 ===
+Core Technology Documentation
+ 
+Flutter SDK Official Documentation: https://docs.flutter.dev/
+TensorFlow Lite Official Guide: https://www.tensorflow.org/lite/guide
+BERT Official Repository: https://github.com/google-research/bert
+MobileCLIP Official Repository: https://github.com/apple/ml-mobileclip
+PDFium (Chromium PDF Engine) Documentation: https://pdfium.googlesource.com/pdfium/
+Supporting Open-Source Tool Documentation
+ 
+Chroma DB Official Guide: https://docs.trychroma.com/
+Apache Tika Documentation: https://tika.apache.org/
+Google Test Framework Guide: https://google.github.io/googletest/
+WCAG 2.1 AA Accessibility Standard: https://www.w3.org/TR/WCAG21/
+Learning Courses
+ 
+Machine Learning Crash Course: https://developers.google.com/machine-learning/crash-course
+Flutter & Dart Development Course: https://developers.google.com/learn/topics/flutter
+Web Accessibility Course: https://web.dev/learn/accessibility/

@@ -1,0 +1,6 @@
+Pillow==12.1.1
+packaging==26.0
+pytesseract==0.3.13
+torch==2.14.0
+torchvision==0.29.0
+mobileclip @ git+https://github.com/apple/ml-mobileclip.git@aecfb5453d022e9deff12f81a150ea8f35194baa

@@ -1,0 +1,6 @@
+# Keep the dependency directory layout in Git, but never publish downloaded
+# models, runtimes, executables, or other binary dependency payloads.
+*
+!*/
+!.gitignore
+!**/.gitkeep

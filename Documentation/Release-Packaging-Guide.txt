@@ -1,0 +1,412 @@
+六种发布包编译说明
+====================
+
+一、目录用途
+------------
+
+本说明以 V8/New 为发布源目录。它包含三个部分：
+
+1. Project
+   保存完整源代码、Flutter 平台工程、程序资源以及发布脚本。
+   此目录不应长期保存 build、.dart_tool、ephemeral、编译后的 EXE/DLL、模型权重或本机运行时。
+
+2. Dependencies/Packageable
+   保存同一份文件可以直接用于 Windows、Linux 和 macOS 的平台无关依赖：
+
+   - Models：文本、图像和音频模型、词表及模型配置。
+   - Apache-Tika：tika-app-4.0.0.jar。
+   - Tesseract-Data：Tesseract OCR 的语言和文字系统数据。
+
+   这些依赖不需要为三个操作系统分别下载。发布脚本会把它们加入每一种发布包。
+
+3. Dependencies/Non-Packageable
+   保存必须针对操作系统和处理器架构准备的原生运行时与二进制文件。
+   Windows 文件不能复制到 Linux 或 macOS 使用；Linux 和 macOS 也不能互相混用。
+
+编译产物必须输出到 New 文件夹以外。例如：
+
+V8/ReleaseOutput/windows-external
+V8/ReleaseOutput/windows-self-contained
+V8/ReleaseOutput/linux-external
+V8/ReleaseOutput/linux-self-contained
+V8/ReleaseOutput/macos-external
+V8/ReleaseOutput/macos-self-contained
+
+发布脚本拒绝覆盖已经存在的输出目录。重新发布前，应改用一个不存在的新目录，或者先自行确认并清理旧输出目录。
+
+
+二、第一步：准备不可跨平台依赖
+--------------------------------
+
+目录结构必须使用下面的固定名称：
+
+Dependencies/Non-Packageable/Windows
+Dependencies/Non-Packageable/Linux
+Dependencies/Non-Packageable/macOS
+
+每个平台目录下都应准备以下七个子目录：
+
+python
+java
+tesseract
+pdfium
+djvulibre
+ghostpdl
+jpeg_xr
+
+只有编译“自包含版”时，当前操作系统目录中的七类依赖才必须全部准备完成。
+编译“外置依赖版”时，不把这些原生运行时放入发布包；最终用户需要在自己的系统安装并在程序设置界面配置路径。
+
+
+（一）Python 运行时：python
+
+作用：运行文件解析、图片处理、音频处理、OCR 接入、向量服务和多模态模型服务。
+
+必须下载与目标操作系统及处理器架构匹配的完整 Python 运行时，不能把 Windows Python 复制给 Linux 或 macOS。
+
+最低目录要求：
+
+Windows：
+Dependencies/Non-Packageable/Windows/python/python.exe
+
+Linux：
+Dependencies/Non-Packageable/Linux/python/bin/python3
+
+macOS：
+Dependencies/Non-Packageable/macOS/python/bin/python3
+
+该 Python 环境还必须安装程序需要的模块。发布脚本会实际导入检查以下模块，缺少任何一项都会拒绝生成自包含包：
+
+av
+bs4
+chromadb
+ebooklib
+faster_whisper
+imagecodecs
+librosa
+lxml
+matplotlib
+mobileclip
+mutagen
+numpy
+odf
+olefile
+openpyxl
+PIL（由 Pillow 提供）
+fitz（由 PyMuPDF 提供）
+pytesseract
+docx（由 python-docx 提供）
+pptx（由 python-pptx 提供）
+resvg_py
+soundfile
+striprtf
+torch
+torchvision
+transformers
+
+如果某个 Python 包包含 DLL、SO 或 DYLIB，必须在目标操作系统上安装对应版本，不能跨系统复制 site-packages。
+
+
+（二）Java 运行时：java
+
+作用：运行 Apache Tika，提取多种文档格式中的文字和元数据。
+
+最低文件要求：
+
+Windows：java/bin/java.exe
+Linux：java/bin/java
+macOS：java/bin/java，或者对应 JRE/JDK 包中的原生 java 可执行文件
+
+Java 运行时必须与目标系统和架构匹配。
+Apache Tika 的 JAR 不放在这里；它已经位于 Packageable/Apache-Tika，可在三个系统共用。
+
+
+（三）Tesseract 运行时：tesseract
+
+作用：执行图片和扫描文档 OCR。
+
+最低文件要求：
+
+Windows：tesseract/tesseract.exe，以及该程序所需的 DLL
+Linux：tesseract/tesseract，以及该程序所需的 SO 库
+macOS：tesseract/tesseract，以及该程序所需的 DYLIB 库
+
+OCR 语言数据不需要重复下载到三个平台目录。语言数据统一位于 Packageable/Tesseract-Data，发布时会复制到 Tesseract 的 tessdata 位置。
+
+
+（四）PDFium：pdfium
+
+作用：渲染和读取 PDF 页面。
+
+最低文件要求：
+
+Windows：pdfium/pdfium.dll，以及同一发行版需要的配套 DLL
+Linux：pdfium/libpdfium.so，以及需要的配套 SO
+macOS：pdfium/libpdfium.dylib，以及需要的配套 DYLIB
+
+三个文件不是互换关系，必须下载目标操作系统版本。
+
+
+（五）DjVuLibre：djvulibre
+
+作用：读取 DjVu 文件、渲染页面并提取文本。
+
+每个平台至少必须提供下面三个原生命令及其动态库：
+
+ddjvu
+djvutxt
+djvused
+
+Windows 文件名通常为 ddjvu.exe、djvutxt.exe、djvused.exe。
+Linux 和 macOS 使用各自系统的原生可执行文件，不能使用 Windows EXE。
+
+
+（六）GhostPDL/Ghostscript：ghostpdl
+
+作用：渲染 PostScript、EPS 及相关页面描述格式。
+
+最低文件要求：
+
+Windows：gswin64c.exe 或 gswin32c.exe，以及对应 DLL 和资源目录
+Linux：gs，以及对应 SO 和资源目录
+macOS：gs，以及对应 DYLIB 和资源目录
+
+应优先选择与目标系统架构一致的 64 位版本。
+
+
+（七）JPEG XR 解码工具：jpeg_xr
+
+作用：解码 JPEG XR、HDP、WDP 等图像。
+
+最低文件要求：
+
+Windows：JxrDecApp.exe，以及需要的 DLL
+Linux：JxrDecApp 或兼容的原生 JPEG XR 解码程序
+macOS：JxrDecApp 或兼容的原生 JPEG XR 解码程序
+
+当前发布校验会查找 JxrDecApp.exe 或 JxrDecApp。
+
+
+（八）浏览器
+
+浏览器不放入 Dependencies，也不随自包含包发布。
+程序将使用用户系统已经安装的受支持浏览器，并允许用户在设置界面选择路径。
+
+
+（九）替换其他系统依赖时的原则
+
+例如从 Windows 自包含版改为 Linux 自包含版时：
+
+1. 保留 Project 不变。
+2. 保留 Dependencies/Packageable 不变。
+3. 不要复制 Non-Packageable/Windows 中的任何 EXE 或 DLL 到 Linux。
+4. 在 Non-Packageable/Linux 的七个固定子目录中放入 Linux 原生版本。
+5. 保持七个子目录名称不变，只替换其中的原生程序和动态库。
+6. macOS 同理，应在 Non-Packageable/macOS 中放入 macOS 原生版本。
+
+
+三、编译机必须具备的开发工具
+--------------------------------
+
+以下是“用于编译源代码的开发工具”，不属于最终程序运行时依赖目录：
+
+所有系统：
+
+- Flutter SDK，版本应满足 Project/pubspec.yaml 的 Dart SDK 约束。
+- 本项目已在 Flutter 3.47.1、Dart 3.13.1 下完成 Windows 编译验证。
+- Git，Flutter SDK 启动和依赖管理会使用。
+- 能运行 tool/release.py 的 Python 3；如果对应平台的 Non-Packageable/python 已准备完成，release.cmd 或 release.sh 会优先使用该 Python。
+
+Windows：
+
+- Visual Studio 的“使用 C++ 的桌面开发”工作负载。
+- Windows SDK、CMake 和 Ninja（通常由 Flutter/Visual Studio 配置）。
+- 必须在 Windows 上编译 Windows 发布包。
+
+Linux：
+
+- clang、cmake、ninja、pkg-config、GTK 3 开发包及 Flutter Linux 桌面工具链。
+- 必须在 Linux 上编译 Linux 发布包。
+
+macOS：
+
+- Xcode、Xcode Command Line Tools、CocoaPods，以及 Flutter macOS 桌面工具链。
+- 必须在 macOS 上编译 macOS 发布包。
+
+Flutter 桌面程序不支持用当前 Windows 机器直接交叉编译 Linux 或 macOS 包。六种命令是统一的发布入口，但必须在对应目标系统上运行。
+
+
+四、第二步：执行六种发布命令
+--------------------------------
+
+下面六组命令每次只选择一组执行。
+所有输出路径都位于 New 外部。
+
+
+第一种：Windows 外置依赖版
+--------------------------
+
+用途：发布包包含程序以及 Packageable 中的平台无关模型和数据，但不包含 Windows Python、Java、Tesseract、PDFium 等原生运行时。
+
+在 Windows CMD 中执行：
+
+cd /d "项目所在路径\New\Project\ReleaseCode"
+release.cmd windows-external --output "..\..\..\ReleaseOutput\windows-external"
+
+完成后，可发布目录为：
+
+项目所在路径\ReleaseOutput\windows-external
+
+主程序为该目录下的 retrieval.exe。发布时必须交付整个 windows-external 文件夹，不能只交付 retrieval.exe。
+
+
+第二种：Windows 自包含版
+------------------------
+
+前提：Dependencies/Non-Packageable/Windows 中七类依赖全部完整。
+
+在 Windows CMD 中执行：
+
+cd /d "项目所在路径\New\Project\ReleaseCode"
+release.cmd windows-self-contained --output "..\..\..\ReleaseOutput\windows-self-contained"
+
+完成后，可发布目录为：
+
+项目所在路径\ReleaseOutput\windows-self-contained
+
+发布时交付整个 windows-self-contained 文件夹。
+
+
+第三种：Linux 外置依赖版
+------------------------
+
+在 Linux 终端执行。请把 /path/to/V8 替换为 V8 的实际绝对路径：
+
+cd "/path/to/V8/New/Project/ReleaseCode"
+chmod +x release.sh
+./release.sh linux-external --output "/path/to/V8/ReleaseOutput/linux-external"
+
+完成后，交付整个目录：
+
+/path/to/V8/ReleaseOutput/linux-external
+
+
+第四种：Linux 自包含版
+----------------------
+
+前提：Dependencies/Non-Packageable/Linux 中七类 Linux 原生依赖全部完整。
+
+在 Linux 终端执行：
+
+cd "/path/to/V8/New/Project/ReleaseCode"
+chmod +x release.sh
+./release.sh linux-self-contained --output "/path/to/V8/ReleaseOutput/linux-self-contained"
+
+完成后，交付整个目录：
+
+/path/to/V8/ReleaseOutput/linux-self-contained
+
+
+第五种：macOS 外置依赖版
+------------------------
+
+在 macOS 终端执行。请把 /path/to/V8 替换为 V8 的实际绝对路径：
+
+cd "/path/to/V8/New/Project/ReleaseCode"
+chmod +x release.sh
+./release.sh macos-external --output "/path/to/V8/ReleaseOutput/macos-external"
+
+完成后，交付生成的 macos-external 目录及其中完整的 retrieval.app，不能只摘取 app 内部的某一个可执行文件。
+
+
+第六种：macOS 自包含版
+----------------------
+
+前提：Dependencies/Non-Packageable/macOS 中七类 macOS 原生依赖全部完整。
+
+在 macOS 终端执行：
+
+cd "/path/to/V8/New/Project/ReleaseCode"
+chmod +x release.sh
+./release.sh macos-self-contained --output "/path/to/V8/ReleaseOutput/macos-self-contained"
+
+完成后，交付整个 macos-self-contained 目录及其中完整的 retrieval.app。
+
+
+五、先校验依赖但不编译
+----------------------
+
+如果只想检查依赖目录是否完整，不生成发布包，可以在上述任一命令的末尾添加：
+
+--validate-only
+
+Windows 示例：
+
+release.cmd windows-self-contained --validate-only
+
+Linux 示例：
+
+./release.sh linux-self-contained --validate-only
+
+macOS 示例：
+
+./release.sh macos-self-contained --validate-only
+
+自包含版校验会检查 Python 模块、Java、Tika、Tesseract、PDFium、DjVuLibre、GhostPDL、JPEG XR 和模型文件。
+
+
+六、发布前最终检查
+------------------
+
+1. 确认输出目录在 New 之外。
+2. 确认 Project 内没有 build、.dart_tool、ephemeral 或 __pycache__。
+3. 确认发布脚本没有引用 Old Project、ReleaseSource、V6 或 V7。
+4. 外置依赖版需要在一台未配置项目内部依赖的目标系统上检查设置流程和缺失依赖提示。
+5. 自包含版需要在一台未安装这些运行时的干净目标系统上检查启动、索引建立、OCR、PDF、音频、图像和查询功能。
+6. Windows 发布包必须在 Windows 测试；Linux 发布包必须在 Linux 测试；macOS 发布包必须在 macOS 测试。
+7. 模型和第三方运行时在对外分发前，还必须复核各自许可证。尤其应单独复核 MobileCLIP 模型权重的再分发和用途限制。
+
+当前已完成的实测：
+
+- Windows 外置依赖版已成功编译并生成 retrieval.exe。
+- Windows 自包含依赖目录已通过完整性校验。
+- Linux 和 macOS 的源代码及发布入口已经准备，但由于当前设备只有 Windows，尚未执行目标系统原生编译和运行测试。
+
+
+七、当前 Windows 发布材料的确认结论
+------------------------------------
+
+截至 2026 年 10 月 21 日，使用 New 文件夹中的现有内容重新执行检查，结果如下：
+
+1. Project 是生成两种 Windows 发布包所需的完整源代码目录。
+2. Project 中没有 build、.dart_tool 和 windows/flutter/ephemeral 等可再生编译产物。
+3. Dependencies/Packageable 中的模型、Apache Tika 和 Tesseract 语言数据已经准备完成。
+4. Dependencies/Non-Packageable/Windows 中的 Python、Java、Tesseract、PDFium、DjVuLibre、GhostPDL 和 JPEG XR 已经准备完成。
+5. Windows 外置依赖版的配置校验已经通过，并且曾实际完成编译。
+6. Windows 自包含版的完整依赖校验已经通过，包括 Python 模块导入检查。
+7. 因此，无需重新下载依赖，只需在 Windows CMD 中选择下面一组命令即可生成对应发布目录。
+
+Windows 外置依赖版：
+
+cd /d "项目所在路径\New\Project\ReleaseCode"
+release.cmd windows-external --output "..\..\..\ReleaseOutput\windows-external"
+
+Windows 自包含版：
+
+cd /d "项目所在路径\New\Project\ReleaseCode"
+release.cmd windows-self-contained --output "..\..\..\ReleaseOutput\windows-self-contained"
+
+上面两个输出目录必须在执行前不存在。发布脚本不会覆盖旧目录。
+
+两种版本都必须交付整个输出文件夹，不能只交付 retrieval.exe。Flutter DLL、插件、data 目录、模型和发布清单都是程序的一部分。
+
+外置依赖版不是“只有一个 EXE”的版本。它仍然自带跨平台模型、Apache Tika 和 OCR 语言数据，但不携带 Windows 原生运行时。最终用户需要在设置页面配置或由程序自动发现 Python、Java、Tesseract、PDFium、DjVuLibre、GhostPDL 和 JPEG XR。
+
+自包含版会把上述 Windows 原生运行时一并复制到发布目录，程序应优先使用包内 dependencies。它仍然不内置浏览器，浏览器使用用户操作系统已有版本。
+
+如果仅检查材料是否齐全而不生成发布包，可以执行：
+
+release.cmd windows-external --validate-only
+release.cmd windows-self-contained --validate-only
+
+“校验通过”只表示源码和依赖已经具备；“发布完成”必须以输出目录实际生成，并完成启动、索引、OCR、PDF、图片、音频和查询测试为准。
